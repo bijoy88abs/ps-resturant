@@ -893,10 +893,10 @@ p {
 }
 
 /*---Smartphone---------------------------------------------------*/
-@media screen and (max-width:767px) and (min-width:576px) {
+@media screen and (max-width:767px) and (min-width:320px) {
 
     .container {
-        width: 540px;
+        width: 320px;
     }
 
 
