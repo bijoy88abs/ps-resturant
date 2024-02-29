@@ -161,11 +161,12 @@ p {
     border-bottom: 1px dotted white;
 }
 
+
 .menu {
-    height: 100px;
+    height: 90px;
     justify-content: center;
     display: flex;
-    column-gap: 50px;
+    column-gap: 60px;
     align-items: center;
 }
 
@@ -176,15 +177,17 @@ p {
     border-radius: 5px;
 }
 
-
 .menu-item a {
     text-decoration: none;
     color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
 }
 
-.item-hover:hover {
-    color: rgb(25, 52, 34);
-    background: rgba(224, 246, 224, 0.915);
+.text a:hover {
+    text-decoration: none;
+    color: black;
+    background: white;
     transition: all 1s ease;
     cursor: pointer;
 }
@@ -697,5 +700,15 @@ p {
 
     .pd-5 {
         height: auto;
+    }
+
+    .menu {
+        height: 70px;
+        column-gap: 20px;
+    }
+
+
+    .menu-item {
+        font-size: 15px;
     }
 }
