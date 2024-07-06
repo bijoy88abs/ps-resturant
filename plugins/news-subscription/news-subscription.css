@@ -75,3 +75,10 @@
     padding: 10px;
 
 }
+
+.error {
+    color: rgb(216, 15, 15);
+}
+.success {
+    color: green;
+}

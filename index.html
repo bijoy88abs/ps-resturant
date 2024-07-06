@@ -123,13 +123,13 @@
         </div>
         <div class="submenu-child4">
             <input type="textbox" class="searchbox" placeholder="search here">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i id="search-btn" class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="submenu-child5">
             <ul>
                 <li>
-                    <i class="fa-regular fa-heart"></i>
-                    <span class="badge">10</span>
+                    <i class="fa-regular fa-heart" id="heart-icon"></i>
+                    <span class="badge">0</span>
                 </li>
                 <li><i class="fa-solid fa-cart-arrow-down"></i> $0.00</li>
                 <li><i class="fa-solid fa-user"></i> Sign In</li>
@@ -144,7 +144,7 @@
             <source src="https://videos.pexels.com/video-files/3015488/3015488-hd_1920_1080_24fps.mp4" type="video/mp4">
         </video>
         <div class="overlayText">
-            <p id="topText">Where every flavor tells a story.</p>
+           
         </div>
     </div>
 
@@ -218,7 +218,15 @@
 
 
     <!--news subscription-->
-    <div class="news-subscription"></div>
+
+    <div class="query-div">
+        <p class="query-txt">Want To Get New <br> Food Daily?</p>
+        <input type="text" placeholder="Name" class="name-sec">
+        <input type="email" placeholder="E-mail" class="mail-sec">
+        <button class="btn-sec">Submit Now</button>
+        <span class="submit-msg"></span>
+    </div>
+
 
 
     <!--section Recipes-->
@@ -682,11 +690,14 @@
                     </div>
 
                     <div class="company-sec">
-                        <a>About Us</a>
-                        <p>The Test Kitchen</p>
-                        <p>Podcast</p>
-                        <p>Events</p>
-                        <p>Job</p>
+                        <ul>
+                            <li><a>About Us</a></li>
+                            <li><a>The Test Kitchen</a></li>
+                            <li><a>Podcast</a></li>
+                            <li><a>Events</a></li>
+                            <li><a>Job</a></li>
+                        </ul>
+
                     </div>
                 </div>
 
@@ -697,12 +708,15 @@
                     <div class="col-12" style="position: relative; margin-left: 3px; margin-top: 18px;">
                         <div class="section-title-line1"></div>
                     </div>
+                   
                     <div class="company-sec">
-                        <p>Contact & Faq</p>
-                        <p>Oders & Returns</p>
-                        <p>Gift Cards</p>
-                        <p>Register</p>
-                        <p>Catalog</p>
+                        <ul>
+                            <li><a>Contact & Faq</a></li>
+                            <li><a>Oders & Returns</a></li>
+                            <li><a>Gift Cards</a></li>
+                            <li><a>Register</a></li>
+                            <li><a>Catalog</a></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -716,12 +730,14 @@
                         <div class="section-title-line1"></div>
                     </div>
                     <div class="company-sec">
-                        <p>The Shop</p>
-                        <p>Recipes</p>
-                        <p>Food</p>
-                        <p>Travel</p>
-                        <p>Hotline</p>
-                    </div>
+                        <ul>
+                            <li><a> The Shop</a></li>
+                            <li><a>Recipes</a></li>
+                            <li><a>Food</a></li>
+                            <li><a>Travel</a></li>
+                            <li><a>Hotline</a></li>
+                        </ul>
+                    </div>      
                 </div>
 
 
@@ -733,11 +749,13 @@
                         <div class="section-title-line1"></div>
                     </div>
                     <div class="company-sec">
-                        <p>Facebook</p>
-                        <p>Twitter</p>
-                        <p>Instagram</p>
-                        <p>Youtube</p>
-                        <p>Whatsapp</p>
+                        <ul>
+                            <li><a>Facebook </a></li>
+                            <li><a>Twitter</a></li>
+                            <li><a>Instagram</a></li>
+                            <li><a>Youtube</a></li>
+                            <li><a>Whatsapp</a></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -756,6 +774,9 @@
 
 
     <script>
+        $('.name-sec').val('');
+        $('.mail-sec').val('');
+
         $(document).ready(function () {
             var a = $(".nav-menu").offset().top;
             $(document).scroll(function () {
@@ -787,6 +808,33 @@
 
             }
         })
+
+        $(".btn-sec").click(function () {
+            let name = $(".name-sec").val();
+            let mail = $(".mail-sec").val();
+
+            if (name != '' && mail != '') {
+                $(".submit-msg").html("<span class='success'>Submitted Successfully</span>");
+            } else {
+                $(".submit-msg").html("<span class='error'>Invalid Entry</span>");
+            }
+        })
+
+        let x = 0;
+        $("#heart-icon").click(function () {
+            x++;
+            $(".badge").html(x)
+        })
+
+        $('#search-btn').click(function () {
+            let x = $(".searchbox").val();
+            if (x == 'zaira') {
+                alert('You will redirect to zaira')
+
+            }
+        })
+
+
     </script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
