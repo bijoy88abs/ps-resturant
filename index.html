@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Website</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swipper.css">
+
+    <link rel="stylesheet" href="css/dark/header.css">
+    <link rel="stylesheet" href="css/light/header.css">
+
+
+    <link rel="stylesheet" href="css/dark/recipes.css">
+    <link rel="stylesheet" href="css/light/recipes.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/hamburgur.css">
+    <script src="js/hambargur.js"></script>
+
+    <script src="plugins/news-subscription/news-subscription.js"></script>
+    <link rel="stylesheet" href="plugins/news-subscription/news-subscription.css">
+
+
+    <script src="plugins/food-cart/food-cart.js"></script>
+    <link rel="stylesheet" href="plugins/food-cart/food-cart.css">
+
+    <script src="plugins/image-caption/image-caption.js"></script>
+    <link rel="stylesheet" href="plugins/image-caption/image-caption.css">
+</head>
+
+<body id="app-body" class="light">
+    <!--Menu header start-->
+    <div class="menu-header" style="z-index: 100; position: sticky;">
+        <div class="nav-menu">
+            <ul>
+                <li>
+                    <a>Forum</a>
+                </li>
+                <li>
+                    <a>About</a>
+                </li>
+                <li>
+                    <a>Faq's</a>
+                </li>
+                <li>
+                    <a>All Recipes</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="social-menu">
+            <ul>
+                <li>
+                    <select id="theme">
+                        <option>light</option>
+                        <option>dark</option>
+                    </select>
+                </li>
+                <li>
+                    Follow Us:
+                </li>
+                <li>
+                    <a><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa-brands fa-twitter"></i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!--Menu header end------>
+
+
+
+
+
+    <div class="submenu-parent" style="position: sticky; top: 0; z-index: 100; background-color: white;">
+        <div class="submenu-child1">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>About</li>
+                        </a>
+                        <a href="#">
+                            <li>Info</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="submenu-child2">
+            <ul>
+                <li>Home <i class="fa-solid fa-angle-down"></i></li>
+                <li>About Us <i class="fa-solid fa-angle-down"></i></li>
+                <li>Features <i class="fa-solid fa-angle-down"></i></li>
+                <li>Categories <i class="fa-solid fa-angle-down"></i></li>
+                <li>Contact <i class="fa-solid fa-angle-down"></i></li>
+            </ul>
+        </div>
+        <div class="submenu-child3">
+            <img class="logoImg" id="logoMenu" src="./images/logomenu.png">
+        </div>
+        <div class="submenu-child4">
+            <input type="textbox" class="searchbox" placeholder="search here">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="submenu-child5">
+            <ul>
+                <li>
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge">10</span>
+                </li>
+                <li><i class="fa-solid fa-cart-arrow-down"></i> $0.00</li>
+                <li><i class="fa-solid fa-user"></i> Sign In</li>
+            </ul>
+        </div>
+
+    </div>
+    <!--sub menu end-->
+
+    <div id="headerContent">
+        <video loop muted autoplay>
+            <source src="https://videos.pexels.com/video-files/3015488/3015488-hd_1920_1080_24fps.mp4" type="video/mp4">
+        </video>
+        <div class="overlayText">
+            <p id="topText">Where every flavor tells a story.</p>
+        </div>
+    </div>
+
+    <!--food cart one start-->
+    <br><br>
+    <!-- <div class="food-cart"></div> -->
+
+    <!-- <div class="img-txt-wrapper">
+        <div class="img-txt1"></div>
+        <div class="img-txt2"></div>
+        <div class="img-txt3"></div>
+        <div class="img-txt4"></div>
+    </div> -->
+
+
+
+    <div class="swipper-wrapper">
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="img-parent">
+                            <div class="img-child-1 jq1">
+                                <img src="images/featured/featured_post01.jpg">
+                                <button class="btn-tag">Lunch</button>
+                            </div>
+                        </div>
+                        <div class="img-txt1"></div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="img-parent">
+                            <div class="img-child-1 jq1">
+                                <img src="images/featured/featured_post05.jpg">
+                                <button class="btn-tag">Lunch</button>
+                            </div>
+                        </div>
+                        <div class="img-txt2"></div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="img-parent">
+                            <div class="img-child-1 jq1">
+                                <img src="images/featured/featured_post03.jpg">
+                                <button class="btn-tag">Lunch</button>
+                            </div>
+                        </div>
+                        <div class="img-txt3"></div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="img-parent">
+                            <div class="img-child-1 jq1">
+                                <img src="images/featured/featured_post04.jpg">
+                                <button class="btn-tag">Lunch</button>
+                            </div>
+                        </div>
+                        <div class="img-txt4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!--news subscription-->
+    <div class="news-subscription"></div>
+
+
+    <!--section Recipes-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 recipes-1">
+                <div class="row">
+                    <div class="col-8">
+                        <h2>Explore Latest Recipes</h2>
+                    </div>
+                    <div class="col-4 view-all">
+                        <button>VIEW ALL <i class="fa-solid fa-location-arrow"></i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="position: relative; margin-left: 20px; margin-top: 18px;">
+                        <div class="section-title-line"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="recipes-parent">
+                            <div class="recipes-child1">
+                                <img src="images/recipies/latest_post01.jpg">
+                                <button class="btn-tag">Lunch</button>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; justify-content: center;">
+                            <div class="img-txt5 big-img-txt"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="recipes-parent">
+                                    <div class="recipes-child2">
+                                        <img src="images/recipies/latest_post01.jpg">
+                                        <button class="btn-tag">Lunch</button>
+                                    </div>
+                                </div>
+                                <div style="display: flex; justify-content: center;">
+                                    <div class="img-txt6"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="recipes-parent">
+                                    <div class="recipes-child3">
+                                        <img src="images/recipies/latest_post01.jpg">
+                                        <button class="btn-tag">Lunch</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <div class="img-txt7"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 recipes-2">
+                <div class="row">
+                    <div class="col-12" style="text-align:center;padding-bottom:20px">
+                        <img src="images/food-cart.png" style="margin-top: 20px;">
+                        <div class="recipes-2-txt">
+                            <h3>Hi, I’m Jenny!</h3>
+
+                            <p>when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+
+                            </p>
+                            <br>
+                            <a><i class="fa-brands fa-facebook-f"></i></a>
+                            <a><i class="fa-brands fa-twitter"></i></a>
+                            <a><i class="fa-solid fa-bars"></i></a>
+                            <a><i class="fa-brands fa-twitter"></i></a>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-12">
+                        <div class="subscribe-sec">
+                            <span>Subscribe & Followers</span>
+                        </div>
+                        <div class="col-12"
+                            style="position: relative; width: 280px; margin-top: 15px; margin-left: 59px;">
+                            <div class="section-title-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-icon-sec">
+
+                        <button class="btn-icon"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
+                        <button class="btn-icon"><i class="fa-brands fa-twitter"></i> Twitter</button>
+                        <button class="btn-icon"><i class="fa-brands fa-instagram"></i> Instagram</button>
+                        <button class="btn-icon"><i class="fa-brands fa-youtube"></i> Youtube</button>
+                        <button class="btn-icon"><i class="fa-brands fa-linkedin"></i> LinkedIn</button>
+                        <button class="btn-icon"><i class="fa-brands fa-pinterest-p"></i> Pinterset</button>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 recipes-1">
+                <div class="row">
+                    <div class="col-10">
+                        <h2>Weekly Best Recipes</h2>
+                    </div>
+                    <div class="col-2 view-all">
+                        <button>VIEW ALL <i class="fa-solid fa-location-arrow"></i></button>
+                    </div>
+                </div>
+
+                <div class="col-12" style="position: relative; margin-left: 20px; margin-top: 18px;">
+                    <div class="section-title-line"></div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6 weekly-recipie">
+                        <div class="recipes-parent" style="padding-top: 0;">
+                            <div class="recipes-child1">
+                                <img src="images/wb recipes/recipe_img01.jpg">
+                                <button class="btn-tag">Lunch</button>
+                            </div>
+                        </div>
+
+                        <div style="position: absolute; bottom: 30px; z-index: 1;">
+                            <div class="img-txt8 big-img-txt"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="wb-rcp-img">
+                                    <img src="images/wb recipes/recipe_img02.jpg">
+                                </div>
+                                <div class="wb-rcp-txt">
+                                    <button class="button-tag">Lunch</button>
+                                    <h3>Exploring The Potential Of Web Workers For Multithreading</h3>
+                                    <P><i class="fa-solid fa-user"></i>By Admin <i
+                                            class="fa-solid fa-calendar-days"></i> 27 AUGUST,2024</P>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="wb-rcp-img">
+                                    <img src="images/wb recipes/recipe_img03.jpg">
+                                </div>
+                                <div class="wb-rcp-txt">
+                                    <button class="button-tag">Breakfast</button>
+                                    <h3>Favorite Browned Butter Chocolate Cookies Daily Breakfast</h3>
+                                    <P><i class="fa-solid fa-user"></i>By Admin <i
+                                            class="fa-solid fa-calendar-days"></i> 27 AUGUST,2024</P>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="wb-rcp-img">
+                                    <img src="images/wb recipes/recipe_img04.jpg">
+                                </div>
+                                <div class="wb-rcp-txt">
+                                    <button class="button-tag">Dinner</button>
+                                    <h3>The Potentially Dangerous Non sibility Of Cookie Notices</h3>
+                                    <P><i class="fa-solid fa-user"></i>By Admin <i
+                                            class="fa-solid fa-calendar-days"></i> 27 AUGUST,2024</P>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="cart-sec">
+
+        <div class="txt-block">
+            <h1>Our Top Categories</h1>
+            <p>
+                Browned butter and brown sugar caramelly goodness, crispy edges thick and soft centers and melty little
+                puddles
+            </p>
+
+        </div>
+
+        <div class="img-block-wrapper">
+            <div class="img-block-parent">
+                <div class="img-block">
+                    <img src="images/cart/categories_img01.png">
+                    <button class="btn-tag2">BREAKFAST</button>
+                </div>
+            </div>
+            <div class="img-block-parent">
+                <div class="img-block">
+                    <img src="images/cart/categories_img02.png">
+                    <button class="btn-tag2">DESSERT</button>
+                </div>
+            </div>
+
+            <div class="img-block-parent">
+                <div class="img-block">
+                    <img src="images/cart/categories_img03.png">
+                    <button class="btn-tag2">LUNCH</button>
+                </div>
+            </div>
+
+            <div class="img-block-parent">
+                <div class="img-block">
+                    <img src="images/cart/categories_img04.png">
+                    <button class="btn-tag2">APPITIZER</button>
+                </div>
+            </div>
+
+            <div class="img-block-parent">
+                <div class="img-block">
+                    <img src="images/cart/categories_img05.png">
+                    <button class="btn-tag2">DINNER</button>
+                </div>
+            </div>
+
+            <div class="img-block-parent">
+                <div class="img-block">
+                    <img src="images/cart/categories_img06.png">
+                    <button class="btn-tag2">PIZZA</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="col-12" style="margin-top: 40px; text-align: center; margin-bottom: 0px;">
+            <img src="images/advertisement01.jpg">
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 recipes-1">
+                <div class="row">
+                    <div class="col-8">
+                        <h2>Weekly Best Recipes</h2>
+                        <div class="row">
+                            <div class="col-12" style="position: relative; margin-left: 20px; margin-top: 18px;">
+                                <div class="section-title-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="row cart-sec-3">
+                            <div class="col-4">
+                                <div class="recipes-parent">
+                                    <div class="recipes-child2">
+                                        <img src="images/cart-3/hr_post01.jpg">
+                                        <button class="btn-tag">LUNCH</button>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; justify-content: center;">
+                                    <div class="img-txt9 big-img-txt"></div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="recipes-parent">
+                                    <div class="recipes-child2">
+                                        <img src="images/cart-3/hr_post02.jpg">
+                                        <button class="btn-tag">BREAKFAST</button>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; justify-content: center;">
+                                    <div class="img-txt10 big-img-txt"></div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="recipes-parent">
+                                    <div class="recipes-child2">
+                                        <img src="images/cart-3/hr_post03.jpg">
+                                        <button class="btn-tag">DESSERT</button>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; justify-content: center;">
+                                    <div class="img-txt11 big-img-txt"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row cart-sec-3">
+                            <div class="col-4">
+                                <div class="recipes-parent">
+                                    <div class="recipes-child2">
+                                        <img src="images/cart-3/hr_post04.jpg">
+                                        <button class="btn-tag">PIZZA</button>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; justify-content: center;">
+                                    <div class="img-txt11 big-img-txt"></div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-4">
+                                <div class="recipes-parent">
+                                    <div class="recipes-child2">
+                                        <img src="images/cart-3/hr_post05.jpg">
+                                        <button class="btn-tag">APPITIZER</button>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; justify-content: center;">
+                                    <div class="img-txt11 big-img-txt"></div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-4">
+                                <div class="recipes-parent">
+                                    <div class="recipes-child2">
+                                        <img src="images/cart-3/hr_post06.jpg">
+                                        <button class="btn-tag">DINNER</button>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; justify-content: center;">
+                                    <div class="img-txt11 big-img-txt"></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-4">
+                        <h2>Popular Recipes</h2>
+                        <div class="row">
+
+                            <div class="col-12" style="position: relative; margin-left: 20px; margin-top: 18px;">
+                                <div class="section-title-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 50px;">
+                            <div class="col-12">
+                                <div class="wb-rcp-img1">
+                                    <img src="images/popular/popular_post01.jpg">
+                                </div>
+                                <div class="wb-rcp-txt1">
+                                    <button class="button-tag">Lunch</button>
+                                    <h3>Exploring The Potential Of Web Workers For Multithreading</h3>
+                                    <P><i class="fa-solid fa-user"></i>By Admin <i
+                                            class="fa-solid fa-calendar-days"></i> 27 AUGUST,2024</P>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="wb-rcp-img1">
+                                    <img src="images/popular/popular_post02.jpg">
+                                </div>
+                                <div class="wb-rcp-txt1">
+                                    <button class="button-tag">Breakfast</button>
+                                    <h3>Favorite Browned Butter Chocolate Cookies Daily Breakfast</h3>
+                                    <P><i class="fa-solid fa-user"></i>By Admin <i
+                                            class="fa-solid fa-calendar-days"></i> 27 AUGUST,2024</P>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="wb-rcp-img1">
+                                    <img src="images/popular/popular_post03.jpg">
+                                </div>
+                                <div class="wb-rcp-txt1">
+                                    <button class="button-tag">Dinner</button>
+                                    <h3>The Potentially Dangerous Non sibility Of Cookie Notices</h3>
+                                    <P><i class="fa-solid fa-user"></i>By Admin <i
+                                            class="fa-solid fa-calendar-days"></i> 27 AUGUST,2024</P>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="wb-rcp-img1">
+                                    <img src="images/popular/popular_post04.jpg">
+                                </div>
+                                <div class="wb-rcp-txt1">
+                                    <button class="button-tag">Dinner</button>
+                                    <h3>The Potentially Dangerous Non sibility Of Cookie Notices</h3>
+                                    <P><i class="fa-solid fa-user"></i>By Admin <i
+                                            class="fa-solid fa-calendar-days"></i> 27 AUGUST,2024</P>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="wb-rcp-img1">
+                                    <img src="images/popular/popular_post05.jpg">
+                                </div>
+                                <div class="wb-rcp-txt1">
+                                    <button class="button-tag">Dinner</button>
+                                    <h3>The Potentially Dangerous Non sibility Of Cookie Notices</h3>
+                                    <P><i class="fa-solid fa-user"></i>By Admin <i
+                                            class="fa-solid fa-calendar-days"></i> 27 AUGUST,2024</P>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="col-12" style="margin-top: 40px; text-align: center; margin-bottom: 0px;">
+            <img src="images/advertisement02.jpg">
+        </div>
+    </div>
+    <br> <br>
+
+    <div class="container-fluid footer-parent" style="border-bottom:1px solid gray;">
+        <div class="row">
+            <div class="col-4">
+                <div class="footer-sec1">
+                    <img src="images/logo2.png" class="footer-img">
+                    <p>Browned butter and brown sugar caramelly goodness,
+                        crispy edges thick and soft centers and melty little puddles of chocolate.</p>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <div class="footer-sec2">
+                    <h4>Company</h4>
+                    <div class="col-12" style="position: relative; margin-left: 3px; margin-top: 18px;">
+                        <div class="section-title-line1"></div>
+                    </div>
+
+                    <div class="company-sec">
+                        <a>About Us</a>
+                        <p>The Test Kitchen</p>
+                        <p>Podcast</p>
+                        <p>Events</p>
+                        <p>Job</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <div class="footer-sec2">
+                    <h4>Get Help</h4>
+                    <div class="col-12" style="position: relative; margin-left: 3px; margin-top: 18px;">
+                        <div class="section-title-line1"></div>
+                    </div>
+                    <div class="company-sec">
+                        <p>Contact & Faq</p>
+                        <p>Oders & Returns</p>
+                        <p>Gift Cards</p>
+                        <p>Register</p>
+                        <p>Catalog</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-2">
+                <div class="footer-sec2">
+                    <h4>Explore</h4>
+
+                    <div class="col-12" style="position: relative; margin-left: 3px; margin-top: 18px;">
+                        <div class="section-title-line1"></div>
+                    </div>
+                    <div class="company-sec">
+                        <p>The Shop</p>
+                        <p>Recipes</p>
+                        <p>Food</p>
+                        <p>Travel</p>
+                        <p>Hotline</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-2">
+                <div class="footer-sec2">
+                    <h4>Follow Us On</h4>
+                    <div class="col-12" style="position: relative; margin-left: 3px; margin-top: 18px;">
+                        <div class="section-title-line1"></div>
+                    </div>
+                    <div class="company-sec">
+                        <p>Facebook</p>
+                        <p>Twitter</p>
+                        <p>Instagram</p>
+                        <p>Youtube</p>
+                        <p>Whatsapp</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            var a = $(".nav-menu").offset().top;
+            $(document).scroll(function () {
+                if ($(this).scrollTop() > a) {
+                    $('.logoImg').css({ "width": "70px" });
+                } else {
+                    $('.logoImg').css({ "width": "auto" });
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('#theme').val('light');
+            $('#app-body').addClass('light');
+            $('#app-body').removeClass('dark');
+            $("#logoMenu").attr('src', './images/logomenu.png');
+        });
+
+        $('#theme').change(function (e) {
+            let val = $(this).val();
+            if (val == 'dark') {
+                $('#app-body').removeClass('light');
+                $('#app-body').addClass('dark');
+                $("#logoMenu").attr('src', './images/logo2.png');
+            } else {
+                $('#app-body').addClass('light');
+                $('#app-body').removeClass('dark');
+                $("#logoMenu").attr('src', './images/logomenu.png');
+
+            }
+        })
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <!--Uncomment this line-->
+    <script src="js/swipper.js"></script>
+    <script src="js/img-txt.js"></script>
+</body>
+
+</html>

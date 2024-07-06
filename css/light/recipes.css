@@ -1,0 +1,314 @@
+.recipes-1 {
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.recipes-1 h2 {
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 30px;
+}
+
+.recipes-1 .view-all {
+    text-align: right;
+}
+
+.recipes-1 .view-all button {
+    padding: 10px;
+    width: 102px;
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 14px;
+    transition: 1s all ease;
+    border-radius: 6px;
+    border: 1px solid gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.recipes-1 .view-all button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.recipes-1 .view-all i {
+
+    color: rgb(250, 69, 69);
+}
+
+.recipes-1 .recipes-child {
+    width: 100%;
+    overflow: hidden;
+}
+
+.recipes-parent {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
+    column-gap: 10px;
+    position: relative;
+}
+
+.recipes-parent img {
+    width: 100%;
+    display: block;
+    transition: all 3s ease;
+}
+
+.recipes-parent img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+
+.recipes-child1,
+.recipes-child2,
+.recipes-child3 {
+    overflow: hidden;
+}
+
+.recipes-child1 button,
+.recipes-child2 button,
+.recipes-child3 button {
+    position: absolute;
+    margin-top: -20px;
+    font-size: 12px;
+    padding: 10px;
+    width: 100px;
+    background-color: #c8361c;
+    color: white;
+    border: 1px solid white;
+}
+
+.recipes-child1 button {
+    margin-left: 200px;
+}
+
+.recipes-child2 button {
+    margin-left: 73px;
+}
+
+.recipes-child3 button {
+    margin-left: 73px;
+}
+
+.recipes-2 {
+    margin-top: 40px;
+    padding-left: 30px;
+}
+
+.section-title-line {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 1px solid rgb(168, 168, 168);
+    border-left: none;
+    border-right: none;
+}
+
+.section-title-line::before {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 40px;
+    height: 5px;
+    background: red;
+
+}
+
+.section-title-line::after {
+    content: "";
+    position: absolute;
+    left: 36px;
+    top: -1.5px;
+    width: 10px;
+    height: 6px;
+    background: white;
+    clip-path: polygon(40% 0, 100% 0%, 60% 100%, 0 100%);
+}
+
+.wb-rcp-img {
+    width: 27%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin-bottom: 46px;
+    margin-left: 20px;
+}
+
+.wb-rcp-img img {
+    width: 100%;
+}
+
+
+.wb-rcp-txt {
+    width: 70%;
+    overflow: hidden;
+    display: flex;
+    row-gap: 15px;
+    padding-left: 15px;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.button-tag {
+    width: 90px;
+    background-color: #ec6850;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    border: none;
+}
+
+.button-tag:hover {
+    cursor: pointer;
+    background-color: rgb(7, 7, 49);
+}
+
+.wb-rcp-tx p {
+    color: gray;
+}
+
+.wb-rcp-img img {
+    width: 100%;
+    display: block;
+    transition: all 3s ease;
+}
+
+.wb-rcp-img img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+
+.weekly-recipie {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.weekly-recipie::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    bottom: 0;
+    right: 10px;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(24, 51, 84, 0.00) 0%, #183354 84.90%);
+}
+
+.weekly-recipie .txt-parent {
+    align-items: start;
+}
+
+.weekly-recipie .txt-parent .txt-child a {
+    font-size: 20px;
+    color: white;
+}
+
+.weekly-recipie .txt-parent .add-txt-child {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #d2d2d2;
+}
+
+.cart-sec .img-block-wrapper {
+    display: flex;
+    column-gap: 20px;
+    position: relative
+}
+
+.img-block {
+    position: relative;
+    border: 7px solid rgb(209, 198, 198);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.img-block::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #193455;
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease 0.8s;
+    transform: scale(0);
+    border-radius: 50%;
+}
+
+.img-block-parent:hover .img-block::after {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+.img-block-parent:hover .img-block img {
+    transform: scale(1.08);
+}
+
+
+.btn-tag2 {
+    position: absolute;
+    top: 66px;
+    left: 40px;
+    width: 80px;
+    background-color: #ec6850;
+    color: white;
+    padding-bottom: 5px;
+    margin: 10px;
+    height: 28px;
+    border: none;
+    z-index: 1;
+}
+
+.cart-sec-3 .txt-child a {
+    font-size: 16px;
+}
+
+.cart-sec-3 .add-txt-child {
+    font-size: 12px;
+}
+.wb-rcp-txt1{
+    width: 65%;
+overflow: hidden;
+display: flex;
+row-gap: 10px;
+padding-left: 15px;
+margin-top: -5px;
+flex-direction: column;
+}
+.wb-rcp-txt1 p{
+    font-size: 11px;
+
+}
+
+.wb-rcp-txt1 h3{
+    font-size: 16px;
+    
+}
+.wb-rcp-img1{
+   
+        width: 27%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        margin-bottom: 24px;
+        margin-left: 20px;
+    
+}
+

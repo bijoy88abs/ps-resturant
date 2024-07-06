@@ -1,0 +1,193 @@
+.dark .recipes-2-txt {
+    height: 370px;
+    padding-top: 80px;
+    ;
+    border-top: 7px solid rgb(255, 0, 0);
+    margin: 0 auto;
+    width: 300px;
+    margin-top: -70px;
+    background-color: rgb(231, 231, 223);
+}
+
+.dark .recipes-2-txt p {
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    color: rgb(54, 53, 53);
+}
+
+.dark .recipes-2-txt {
+    font-size: 23px;
+}
+
+.dark .recipes-2-txt i {
+    color: white;
+    transition: all 1s ease;
+    background-color: rgb(226, 69, 69);
+    font-size: 16px;
+    padding: 12px;
+
+}
+
+.dark .recipes-2-txt i:hover {
+
+    cursor: pointer;
+    background-color: rgb(7, 4, 49);
+}
+
+.light .subscribe-sec {
+    padding-left: 58px;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.dark .subscribe-sec {
+    color: white;
+}
+
+
+
+.recipes-1 {
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.light .recipes-1 h2 {
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 30px;
+}
+.dark .recipes-1 h2 {
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 30px;
+    color: white;
+}
+
+.recipes-1 .view-all {
+    text-align: right;
+}
+
+.dark .recipes-1 .view-all button {
+    padding: 10px;
+    width: 102px;
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 14px;
+    transition: 1s all ease;
+    border-radius: 6px;
+    border: 1px solid gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dark .recipes-1 .view-all button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.dark .recipes-1 .view-all i {
+
+    color: rgb(250, 69, 69);
+}
+
+.recipes-1 .recipes-child {
+    width: 100%;
+    overflow: hidden;
+}
+
+.recipes-parent {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
+    column-gap: 10px;
+    position: relative;
+}
+
+.recipes-parent img {
+    width: 100%;
+    display: block;
+    transition: all 3s ease;
+}
+
+.recipes-parent img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+
+.recipes-child1,
+.recipes-child2,
+.recipes-child3 {
+    overflow: hidden;
+}
+
+.dark .recipes-child1 button,
+.recipes-child2 button,
+.recipes-child3 button {
+    position: absolute;
+    margin-top: -20px;
+    font-size: 12px;
+    padding: 10px;
+    width: 100px;
+    background-color: #c8361c;
+    color: white;
+    border: 1px solid white;
+}
+
+.recipes-child1 button {
+    margin-left: 200px;
+}
+
+.recipes-child2 button {
+    margin-left: 73px;
+}
+
+.recipes-child3 button {
+    margin-left: 73px;
+}
+
+.recipes-2 {
+    margin-top: 40px;
+    padding-left: 30px;
+}
+
+.dark .section-title-line {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 1px solid rgb(168, 168, 168);
+    border-left: none;
+    border-right: none;
+}
+
+.dark .section-title-line::before {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 40px;
+    height: 5px;
+    background: red;
+
+}
+
+.dark .section-title-line::after {
+    content: "";
+    position: absolute;
+    left: 36px;
+    top: -1.5px;
+    width: 10px;
+    height: 6px;
+    background: white;
+    clip-path: polygon(40% 0, 100% 0%, 60% 100%, 0 100%);
+}

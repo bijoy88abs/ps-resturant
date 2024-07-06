@@ -1,0 +1,98 @@
+.img-parent {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    padding-top: 50px;
+    column-gap: 10px;
+    position: relative;
+}
+
+
+.img-child-1,
+.img-child-2,
+.img-child-3,
+.img-child-4 {
+    width: 300px;
+    overflow: hidden;
+}
+
+.img-parent img {
+    width: 100%;
+    display: block;
+    transition: all 3s ease;
+    overflow: hidden;
+}
+
+.img-parent img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+.dark .img-parent button {
+    position: absolute;
+    margin-top: -60px;
+    font-size: 12px;
+    margin-left: 100px;
+    padding: 10px;
+    width: 100px;
+    background-color: #c8361c;
+    color: white;
+    border: 1px solid white;
+}
+
+.dark .img-parent button:hover {
+    cursor: pointer;
+    background-color: rgb(8, 2, 22);
+    color: white;
+}
+
+.light .img-parent button {
+    position: absolute;
+    margin-top: -60px;
+    font-size: 12px;
+    margin-left: 100px;
+    padding: 10px;
+    width: 100px;
+    background-color: #c8361c;
+    color: white;
+    border: 1px solid white;
+}
+
+.light .img-parent button:hover {
+    cursor: pointer;
+    background-color: rgb(7, 7, 49);
+}
+
+.jq1-active {
+    display: inline;
+}
+
+.jq1-inactive {
+    display: none;
+}
+
+#jq-prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: blue;
+    cursor: pointer;
+    left: 20px;
+    top: 200px;
+    z-index: 100;
+}
+
+
+#jq-next {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: blue;
+    cursor: pointer;
+    right: 20px;
+    top: 200px;
+    z-index: 100;
+}
